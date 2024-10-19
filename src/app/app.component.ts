@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ViewChild } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { CounterComponent } from './counter/counter.component';
 
@@ -10,6 +10,8 @@ import { CounterComponent } from './counter/counter.component';
   styleUrl: './app.component.css'
 })
 export class AppComponent {
+
+  @ViewChild(CounterComponent) head : CounterComponent | undefined;
 
   handle(event: string) {
     console.log(event);

@@ -15,4 +15,6 @@ export class CounterComponent {
   emitEvent() {
     this.myEvent.emit("Hello World!");
   }
+
+  text : string = "Find me by view child";
 }
