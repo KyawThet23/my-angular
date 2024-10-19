@@ -10,5 +10,9 @@ import { CounterComponent } from './counter/counter.component';
   styleUrl: './app.component.css'
 })
 export class AppComponent {
+
+  handle(event: string) {
+    console.log(event);
+  }
   title = 'my-Gular';
 }

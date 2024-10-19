@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 
 @Component({
   selector: 'app-counter',
@@ -9,4 +9,10 @@ import { Component, Input } from '@angular/core';
 })
 export class CounterComponent {
   @Input({required:true}) name: string | undefined ;
+  @Output() 
+  myEvent = new EventEmitter<string>();
+
+  emitEvent() {
+    this.myEvent.emit("Hello World!");
+  }
 }
