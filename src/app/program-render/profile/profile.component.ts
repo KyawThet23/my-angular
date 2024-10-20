@@ -12,15 +12,16 @@ export interface User {
   standalone: true,
   imports: [],
   templateUrl: './profile.component.html',
-  styleUrl: './profile.component.css'
+  styleUrl: './profile.component.css',
 })
-
 export class ProfileComponent {
+  @Input({ required: true }) user?: User;
 
-  @Input({required:true}) user?: User;  
-  
-  getBioComponent() {    
-    return this.user?.isAdmin ? AdminComponent : NormalComponent;  
+  getBioComponent() {
+    return this.user?.isAdmin ? AdminComponent : NormalComponent;
   }
 
+  updateField(event: KeyboardEvent): void {
+    console.log(`The user pressed: ${event.key}`);
+  }
 }
