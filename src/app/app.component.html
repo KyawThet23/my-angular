@@ -1,3 +1,7 @@
-<app-counter [name]="title" (myEvent)="handle($event)"></app-counter>
-<h1>{{head?.text}}</h1>
-<app-profile [user]="user" ></app-profile>
+<app-counter
+  [name]="title"
+  [count]="initialCount"
+  (myEvent)="handle($event)"
+></app-counter>
+<h1>{{ head?.text }}</h1>
+<app-profile [user]="user"></app-profile>

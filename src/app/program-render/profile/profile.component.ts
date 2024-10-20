@@ -22,6 +22,8 @@ export class ProfileComponent {
   }
 
   updateField(event: KeyboardEvent): void {
-    console.log(`The user pressed: ${event.key}`);
+    if (event.key === 'Enter') {
+      console.log('The user pressed enter in the text field.');
+    }
   }
 }

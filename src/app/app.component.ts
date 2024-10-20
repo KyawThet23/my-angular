@@ -18,7 +18,7 @@ export class AppComponent {
     console.log(event);
   }
   title = 'my-Gular';
-
+  initialCount = 18;
   user : User = {
     name : "Admin",
     isAdmin : true
