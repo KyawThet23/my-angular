@@ -3,11 +3,12 @@ import { RouterOutlet } from '@angular/router';
 import { CounterComponent } from './counter/counter.component';
 import { ProfileComponent, User } from './program-render/profile/profile.component';
 import { BuiltInComponent } from "./pipe/built-in/built-in.component";
+import { DeferComponent } from "./defer/defer.component";
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, CounterComponent, ProfileComponent, BuiltInComponent],
+  imports: [RouterOutlet, CounterComponent, ProfileComponent, BuiltInComponent, DeferComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })

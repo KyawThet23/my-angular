@@ -1,0 +1,8 @@
+<p>defer works!</p>
+@defer (on interaction) {
+    <app-defer-test />
+  } @loading (after 100ms; minimum 1s) {
+    <img alt="loading..." src="loading.gif" />
+  } @placeholder {
+    <p>Placeholder content</p>
+  }
